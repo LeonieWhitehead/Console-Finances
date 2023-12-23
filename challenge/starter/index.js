@@ -87,6 +87,13 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+console.log("Financial Analysis");
+console.log("-------------------------");
+
+  // The total number of months included in the dataset. - split the data into months and amounts? find the array length to get total months
+
+  var totalMonths = finances.length;
+  console.log("Total months:" + totalMonths);
 
 
 
