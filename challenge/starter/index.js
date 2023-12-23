@@ -90,12 +90,19 @@ var finances = [
 console.log("Financial Analysis");
 console.log("-------------------------");
 
-  // The total number of months included in the dataset. - split the data into months and amounts? find the array length to get total months
+  // The total number of months included in the dataset. 
+  //split the data into months and amounts? 
+  //the data is in an array. 
+  //Find the array length to get total months
 
   var totalMonths = finances.length;
   console.log("Total months:" + totalMonths);
 
-   // The net total amount of Profit/Losses over the entire period. - create var for amounts. How to add all numbers in 2nd column? Array counts from 0 so the 2nd column would be 1. For loop from iteration activity?
+   // The net total amount of Profit/Losses over the entire period. 
+   //create var for amounts. 
+   //How to add all numbers in 2nd column? 
+   //Array counts from 0 so the 2nd column would be 1. 
+   //For loop from iteration activity?
   
    var netTotal = 0;
    for (var i = 0; i < totalMonths; i++) {
@@ -103,7 +110,11 @@ console.log("-------------------------");
    }
    console.log("Total: $" + netTotal);
 
- // The average of the changes in Profit/Losses over the entire period. - create a new var that just has the changes in it (sum the change) average of each change
+ // The average of the changes in Profit/Losses over the entire period.
+ //create a new var that just has the changes in it (sum the change) average of each change.
+ //would need to track total changes
+ // track differences between months?
+ // for loop to go through finance array i for dates column, 1 for amounts column
  var totalChanges = 0;
  var count = 0;
  
@@ -116,12 +127,17 @@ console.log("-------------------------");
    count++;
  }
 
-   // Calculate the average
+   // Calculate the average by divding total change by count
+   // round the number to 2 decimals
    var averageChange = totalChanges / count;
    var avChan = averageChange.toFixed(2);
    console.log("Average change:", avChan);
    
-// The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period. Have a vars for amounts and vars for dates. Use array to count through? Another for loop to count through dates and finances? Follow for loop above but add if statement?
+// The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period. 
+//Have vars for amounts and vars for dates. 
+//Use array to count through. 
+//Another for loop to count through dates and finances
+//Follow for loop above but add if statement?
 var greatestIncrease = 0;
 var greatestIncreaseDate = 0;
 
@@ -138,7 +154,10 @@ for (var i = 1; i < finances.length; i++) {
 }
 console.log("Greatest Increase in Profits/Losses:", greatestIncreaseDate, "$",greatestIncrease);
 
-  // The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period. copy previous loop but run iteration on column 2. Change if statement to less than
+  // The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period. 
+  //copy previous loop but run iteration on column 2. 
+  //Change if statement to less than
+
   var firstDecrease = finances[1][1] - finances[0][1];
   var greatestDecrease = firstDecrease;
   var greatestDecreaseDate = finances[1][0];
