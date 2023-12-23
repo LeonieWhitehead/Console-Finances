@@ -95,5 +95,15 @@ console.log("-------------------------");
   var totalMonths = finances.length;
   console.log("Total months:" + totalMonths);
 
+   // The net total amount of Profit/Losses over the entire period. - create var for amounts. How to add all numbers in 2nd column? Array counts from 0 so the 2nd column would be 1. For loop from iteration activity?
+  
+   var netTotal = 0;
+   for (var i = 0; i < totalMonths; i++) {
+     netTotal += finances[i][1];
+   }
+   console.log("Total: $" + netTotal);
+   
+   
+
 
 
