@@ -125,5 +125,33 @@ console.log("-------------------------");
 var greatestIncrease = 0;
 var greatestIncreaseDate = 0;
 
+for (var i = 1; i < finances.length; i++) {
+  var currentDate = finances[i][0];
+  var currentAmount = finances[i][1];
+  var previousAmount = finances[i - 1][1];
+  var increase = currentAmount - previousAmount;
 
+  if (increase > greatestIncrease){
+  greatestIncrease = increase;
+  greatestIncreaseDate = currentDate;
+  }
+}
+console.log("Greatest Increase in Profits/Losses:", greatestIncreaseDate, "$",greatestIncrease);
 
+  // The greatest decrease in Profit/Losses (date and difference in the amounts) over the entire period. copy previous loop but run iteration on column 2. Change if statement to less than
+  var firstDecrease = finances[1][1] - finances[0][1];
+  var greatestDecrease = firstDecrease;
+  var greatestDecreaseDate = finances[1][0];
+  
+  for (var i = 2; i < finances.length; i++) {
+    var currentDate = finances[i][0];
+    var currentAmount = finances[i][1];
+    var previousAmount = finances[i - 1][1];
+    var decrease = currentAmount - previousAmount;
+  
+    if (decrease < greatestDecrease) {
+      greatestDecrease = decrease;
+      greatestDecreaseDate = currentDate;
+    }
+  }
+  console.log("Greatest Decrease in Profits/Losses:", greatestDecreaseDate, "$",greatestDecrease);
