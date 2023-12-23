@@ -121,6 +121,9 @@ console.log("-------------------------");
    var avChan = averageChange.toFixed(2);
    console.log("Average change:", avChan);
    
+// The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period. Have a vars for amounts and vars for dates. Use array to count through? Another for loop to count through dates and finances? Follow for loop above but add if statement?
+var greatestIncrease = 0;
+var greatestIncreaseDate = 0;
 
 
 
