@@ -102,7 +102,24 @@ console.log("-------------------------");
      netTotal += finances[i][1];
    }
    console.log("Total: $" + netTotal);
-   
+
+ // The average of the changes in Profit/Losses over the entire period. - create a new var that just has the changes in it (sum the change) average of each change
+ var totalChanges = 0;
+ var count = 0;
+ 
+ for (var i = 1; i < finances.length; i++) {
+   var currentAmount = finances[i][1];
+   var previousAmount = finances[i - 1][1];
+   var change = currentAmount - previousAmount;
+ 
+   totalChanges += change;
+   count++;
+ }
+
+   // Calculate the average
+   var averageChange = totalChanges / count;
+   var avChan = averageChange.toFixed(2);
+   console.log("Average change:", avChan);
    
 
 
