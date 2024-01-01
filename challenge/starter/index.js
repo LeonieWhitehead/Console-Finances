@@ -1,4 +1,4 @@
-var finances = [
+const finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
   ['Mar-2010', 322013],
@@ -95,7 +95,7 @@ console.log("-------------------------");
   //the data is in an array. 
   //Find the array length to get total months
 
-  var totalMonths = finances.length;
+  let totalMonths = finances.length;
   console.log("Total months:" + totalMonths);
 
    // The net total amount of Profit/Losses over the entire period. 
@@ -104,7 +104,7 @@ console.log("-------------------------");
    //Array counts from 0 so the 2nd column would be 1. 
    //For loop from iteration activity?
   
-   var netTotal = 0;
+   let netTotal = 0;
    for (var i = 0; i < totalMonths; i++) {
      netTotal += finances[i][1];
    }
@@ -115,8 +115,8 @@ console.log("-------------------------");
  //would need to track total changes
  // track differences between months?
  // for loop to go through finance array i for dates column, 1 for amounts column
- var totalChanges = 0;
- var count = 0;
+ let totalChanges = 0;
+ let count = 0;
  
  for (var i = 1; i < finances.length; i++) {
    var currentAmount = finances[i][1];
@@ -129,8 +129,8 @@ console.log("-------------------------");
 
    // Calculate the average by divding total change by count
    // round the number to 2 decimals
-   var averageChange = totalChanges / count;
-   var avChan = averageChange.toFixed(2);
+   let averageChange = totalChanges / count;
+   let avChan = averageChange.toFixed(2);
    console.log("Average change:", avChan);
    
 // The greatest increase in Profit/Losses (date and difference in the amounts) over the entire period. 
@@ -138,8 +138,8 @@ console.log("-------------------------");
 //Use array to count through. 
 //Another for loop to count through dates and finances
 //Follow for loop above but add if statement?
-var greatestIncrease = 0;
-var greatestIncreaseDate = 0;
+let greatestIncrease = 0;
+let greatestIncreaseDate = 0;
 
 for (var i = 1; i < finances.length; i++) {
   var currentDate = finances[i][0];
@@ -158,9 +158,9 @@ console.log("Greatest Increase in Profits/Losses:", greatestIncreaseDate, "$",gr
   //copy previous loop but run iteration on column 2. 
   //Change if statement to less than
 
-  var firstDecrease = finances[1][1] - finances[0][1];
-  var greatestDecrease = firstDecrease;
-  var greatestDecreaseDate = finances[1][0];
+  let firstDecrease = finances[1][1] - finances[0][1];
+  let greatestDecrease = firstDecrease;
+  let greatestDecreaseDate = finances[1][0];
   
   for (var i = 2; i < finances.length; i++) {
     var currentDate = finances[i][0];
