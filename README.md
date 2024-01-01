@@ -48,7 +48,7 @@ The code uses JavaScript and employs various programming concepts and skills, in
 The analysis results, including total months, net total profits/losses, average change, greatest increase, and greatest decrease, will be logged to the console.
 
 ## Screenshot
-![Application Screenshot](https://github.com/LeonieWhitehead/Console-Finances/blob/main/images/Screenshot%202024-01-01%20175401.png?raw=true)
+![Application Screenshot](https://github.com/LeonieWhitehead/Console-Finances/blob/main/images/Screenshot%202024-01-01%20234808.png?raw=true)
 
 
 ## Deployment
